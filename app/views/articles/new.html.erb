@@ -6,16 +6,4 @@
     <% end %>
     </ul>
 <% end %>
-<%= form_for @article do |f| %>
-    <p>
-        <%= f.label :title %><br />
-        <%= f.text_field :title %>
-    </p>
-    <p>
-        <%= f.label :description %><br />
-        <%= f.text_area :description%><br />
-    </p>
-    <p>
-        <%= f.submit "Submit" %>
-    </p>
-<% end %>
+<%= render 'form', article: @article %>
