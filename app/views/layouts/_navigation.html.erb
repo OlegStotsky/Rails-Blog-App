@@ -1,17 +1,25 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand">Rails Blog</a>
+        <%= link_to 'Rails Blog', root_path, class: 'navbar-brand', id: 'logo' %>
     </div>
     <div id="navbarCollapse" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
             <li><%= link_to 'Home', root_path %></li>
             <li><%= link_to 'About', about_path %></li>
             <li><%= link_to 'Articles', articles_path %></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Actions<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><%= link_to 'New Article', new_article_path %></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </nav>
