@@ -4,3 +4,16 @@
 #logo:hover {
     font-weight: bold;
 }
+
+.jumbotron {
+    background-image: asset-url('jumbotron-background.png');
+    background-size: cover;
+    height: 500px;
+}
+
+.jumbotron h1 {
+    color: #fff;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
