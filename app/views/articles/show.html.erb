@@ -2,9 +2,16 @@
     <div class="row">
         <div class="col-xs-12 col-md-6 col-md-offset-3">
             <h1 class="text-center"><%= @article.title %></h1>
-            <p class="well" id="description"><%= @article.description %></p>
-            <%= link_to "Edit this article", edit_article_path(@article) %>
-            <%= link_to "Back to articles listing", articles_path %>
+            <div class="well" id="description">
+                <p id="content"><%= @article.description %></p>
+                <%= link_to "Edit", edit_article_path(@article), class: 'btn btn-primary btn-xs' %>
+                <%= link_to "Delete", article_path(@article), 
+                                      method: :delete, 
+                                      class: 'btn btn-danger btn-xs',
+                                      data: { confirm: 'Are you sure?' }
+                                      %>
+                <%= link_to "All articles", articles_path, class: 'btn btn-primary btn-xs' %>
+            </div>
         </div>
     </div>
 </div>
