@@ -5,23 +5,34 @@
     font-weight: bold;
 }
 
-.jumbotron {
+.pages.home .jumbotron {
     background-image: asset-url('jumbotron-background.png');
     background-size: cover;
     height: 500px;
 }
 
-.jumbotron h1 {
+.pages.home .jumbotron h1 {
     color: #fff;
     margin-bottom: 30px;
     letter-spacing: -1px;
     font-weight: bold;
 }
 
-.articles h1 {
+.articles.index h1 {
     margin-bottom: 50px;
 }
 
-.articles #description {
+.articles.index #description {
     min-height: 100px;
+}
+
+.articles.index #article-title {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.articles.index #article-body {
+    border-top: 1px solid #eaeaea;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }

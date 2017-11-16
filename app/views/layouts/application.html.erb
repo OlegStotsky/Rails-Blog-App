@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="<%= controller_name %>">
+  <div class="<%= controller_name %> <%= action_name %>">
     <%= render 'layouts/navigation' %>
     <%= render 'layouts/messages' %>
     <%= yield %>
