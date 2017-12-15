@@ -1,0 +1,18 @@
+<h1 class="text-center"><%= form_name %></h1>
+<%= form_for user, class: 'form-horizontal' do |f| %>
+    <div class="form-group" %>
+        <%= f.label :username %></br>
+        <%= f.text_field :username, placeholder: 'Username', class: 'form-control' %>
+    </div>
+    <div class="form-group" %>
+        <%= f.label :email %></br>
+        <%= f.text_field :email, placeholder: 'Email', class: 'form-control' %>
+    </div>
+    <div class='form-group' %>
+        <%= f.label :password %></br>
+        <%= f.password_field :password, placeholder: 'Password', class: 'form-control' %>
+    </div>
+    <div class='text-center'>
+        <%= f.submit button_text, class: 'btn btn-primary' %>
+    </div>
+<% end %>
