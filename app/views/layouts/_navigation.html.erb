@@ -21,5 +21,17 @@
                 </ul>
             </li>
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <% if logged_in? %>
+                <li>
+                    <%= link_to logout_path, method: 'delete' do %>
+                        <span class="glyphicon glyphicon-log-out"></span>Log Out
+                    <% end %>
+                </li>
+            <% else %>
+                <li><a href=<%= signup_path %>><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+                <li><a href=<%= login_path %>><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
+            <% end %>
+        </ul>
     </div>
 </nav>
