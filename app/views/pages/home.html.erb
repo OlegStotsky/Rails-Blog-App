@@ -1,6 +1,11 @@
 <div class="container">
     <div class="jumbotron text-center">
         <h1 class="">Rails Blog Engine</h1>
-        <%= link_to 'Signup', '#', class: 'btn btn-primary btn-lg' %>
+        <% if session[:user_id] %>
+            <%= link_to 'Log out', logout_path, class: 'btn btn-primary btn-lg', method: 'delete' %>
+        <% else %>
+            <%= link_to 'Signup', signup_path, class: 'btn btn-primary btn-lg' %>
+            <%= link_to 'Log in', login_path, class: 'btn btn-primary btn-lg' %>
+        <% end %>
     </div>
 </div>
