@@ -50,4 +50,11 @@
 
 .user {
     margin: 0 auto;
+    
+    &__profile_image {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
 }

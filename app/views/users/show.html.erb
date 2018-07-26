@@ -1,6 +1,9 @@
 <div class="container">
     <h1 class="text-center">Welcome to <%= @user.username %>'s page</h1>
     <h4 class="text-center"><%= @user.username %>'s articles </h4>
+    <div class="user__profile_image">
+        <%= gravatar_for(@user) %>
+    </div>
     <%= render partial:'articles/article', collection:@user_articles %>
     <div class="text-center">
         <%= will_paginate @user_articles %>
