@@ -1,6 +1,6 @@
 <div class="container">
     <h1 class="text-center" id="page-title">Listing all articles</h1>
-    <%= render @articles %>
+    <%= render @articles, locals: { cur_user: current_user } %>
     <div class="row">
         <div class="col-xs-7 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-offset-4">
             <%= will_paginate %>
