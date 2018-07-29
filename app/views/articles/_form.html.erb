@@ -8,6 +8,11 @@
         <%= f.label :description %><br />
         <%= f.text_area :description, placeholder: 'Body of article', class: 'form-control', rows: 10, cols: 15 %><br />
     </div>
+    <div class="form-group">
+        <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+            <%= cb.label(class: 'checkbox-inline') { cb.check_box(class: 'checkbox') + cb.text } %>
+        <% end %>
+    </div>
     <div class='form-group'>
         <%= f.submit "Submit", class: 'btn btn-primary' %>
     </div>
