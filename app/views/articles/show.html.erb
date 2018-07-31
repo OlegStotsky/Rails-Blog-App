@@ -4,6 +4,9 @@
             <h1 class="text-center"><%= @article.title %></h1>
             <div class="well" id="description">
                 <p id="content"><%= @article.description %></p>
+                <% if @article.categories.any? %>
+                    <p>Categories: <%= render @article.categories %></p>
+                <% end %>
                 <% if logged_in? && (@article.user == current_user || current_user.admin?) %>
                     <%= link_to "Edit", edit_article_path(@article), class: 'btn btn-primary btn-xs' %>
                     <%= link_to "Delete", article_path(@article), 
